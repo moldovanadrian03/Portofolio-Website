@@ -23,7 +23,8 @@
                     This is my portofolio website to showcase my projects<br> related to university or personal.
                 </p>
                 <!-- <a href="">Download CV</a> -->
-                <a href="/Users/adrianmoldovan/Documents/cvuri/cv4\ lesgo\ baga\ cursul/Adrian-Alexandru_Moldovan_-_Software_Developer.pdf" download="Adrian-Alexandru_Moldovan_-_Software_Developer.pdf" target="_blank">Download CV</a>
+                <!-- <a href="Users/adrianmoldovan/Documents/cvuri/cv4\ lesgo\ baga\ cursul/Adrian-Alexandru_Moldovan_-_Software_Developer.pdf" download>Download</a> -->
+                <a href="/cv/Adrian-Alexandru_Moldovan_-_Software_Developer.pdf" download="Adrian-Alexandru_Moldovan_-_Software_Developer.pdf" target="_blank">Download CV</a>
                 <!-- <a href="/Users/adrianmoldovan/Documents/cvuri/cv4\ lesgo\ baga\ cursul/Adrian-Alexandru_Moldovan_-_Software_Developer.pdf" download="Adrian-Alexandru_Moldovan_-_Software_Developer.pdf">Download!</a> -->
 
 
@@ -44,6 +45,24 @@
             icon.onclick = function(){
                 document.body.classList.toggle("dark-theme");
             }
+
+            const downloadLinks = document.querySelectorAll("[data-download]");
+
+            downloadLinks.forEach(button => {
+                const id = button.dataset.download;
+                const img = document.getElementById(id);
+                const a = document.createElement("a");
+
+                a.href = img.src; 
+                a.download = ""; 
+                a.style.display = "none";
+
+                button.addEventListener("click", () => {
+                    documnet.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                });
+            });
         </script>
     </body>
     <footer>

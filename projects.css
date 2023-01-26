@@ -14,7 +14,7 @@
 }
 
 .hero{
-    height: 330vh;
+    height: 380vh;
     width: 100%;
     background: var(--primary-color);
     font-family: sans-serif;
@@ -128,6 +128,7 @@ span{
     color:var(--secondary-color);
     margin-left: 52vh;
     margin-top: 30vh;
+    margin-bottom: 10vh;
 }
 .social-links a:hover{
     color:#ba260c
@@ -135,21 +136,27 @@ span{
   /*VIDEOS*/
 .videos { 
     position: absolute;
-    display: grid;
+    /* display: grid; */
+    /* display: flex; */
+    flex-direction: column;
     margin-left: 30em;
 }
   /*VIDEOS DESCRIPTIONS*/
 h1 {
     color: var(--secondary-color);
-    /* position: absolute; */
-    margin-left: 5em;
-    /* font-size: 70px; */
+    /* align-content: center; */
+    /* justify-content: flex-end; */
+    /* margin-top: 100px;     */
+    /* margin-left: 6em; */
+    font-size: 50px;
 
 }
 p {
     color: var(--secondary-color);
+    /* align-items: flex-end; */
+    margin: 0;
     /*cauti tu cat ar trebui in fuctie de titlu si bla bla*/
-    margin-left: 24vh;
-    /* font-size: 50px; */
+    /* margin-left: 24vh; */
+    font-size: 30px;
 
 }
