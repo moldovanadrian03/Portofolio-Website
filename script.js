@@ -1,41 +1,17 @@
-            const defaultMode = 'light'
-            const localStorage = window.localStorage;
-            var icon = document.getElementById("icon");
+let icon = document.querySelector("#icon");
+let body = document.querySelector("body");
 
-            icon.onclick = function(){
-                document.body.classList.toggle("dark-theme");
-                if(!(localStorage.getItem('mode') === 'dark')){
-                    localStorage.setItem('mode', 'dark');
-                } else {
-                    localStorage.setItem('mode', 'light');
-                }
-            }
+  icon.addEventListener("click", function() {
+    if (body.classList.contains("dark-theme")) {
+      body.classList.remove("dark-theme");
+      localStorage.setItem("theme", "light");
+    } else {
+      body.classList.add("dark-theme");
+      localStorage.setItem("theme", "dark");
+    }
+  });
 
-            console.log(localStorage.getItem('mode'))
-            if(localStorage.getItem('mode') === 'dark'){
-                console.log('aici')
-                darkMode();
-            } else {
-                lightMode();
-            }
-            
-            const isDarkMode = () => document.body.classList.contains('dark-theme');
-            console.log(themeDiv);
-                function darkMode() {
-                  //localStorage.setItem("mode","dark");
-                  var element = document.body;
-                  var icon = document.getElementById("icon");
-                  document.body.classList.toggle("dark-theme");
-                  //element.className = "darkmode11"
-                  icon.innerText = "Dark Mode is ON"
-                  icon.style.color = "white"
-                }
-                function lightMode() {
-                  //localStorage.setItem("mode","light");
-                  var element = document.body
-                  var icon = document.getElementById("icon");
-                  document.body.classList.toggle("dark-theme");
-                  //element.className = "lightmode11"
-                  icon.innerText = "Dark Mode is OFF"
-                  icon.style.color = "black"
-                }
+  let theme = localStorage.getItem("theme");
+  if (theme == "dark") {
+    body.classList.add("dark-theme");
+  }

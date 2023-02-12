@@ -11,7 +11,11 @@
     --primary-color:#000106;
     --secondary-color:#fff;
 }
+.light-theme{
+    --primary-color:#fff;
+    --secondary-color:#000106;
 
+}
 
 .hero{
     height: 100vh;
@@ -100,6 +104,7 @@ span{
     border-radius: 5px;
 
 }
+
 .img-box{
     width: 30%;
     height: 40%;
