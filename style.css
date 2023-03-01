@@ -1,8 +1,20 @@
+
 @media (max-width: 750px){
+    ul{
+        display: flex;
+        size-adjust: auto;
+    }
     .back-img{
         display: none;
     }
+    div.info > a{
+        display: flex;
+        justify-content: center;
+        margin-right: 30px;
+    }
+   
 }
+
 *{
     margin: 0;
     padding: 0;
