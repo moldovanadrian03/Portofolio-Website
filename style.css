@@ -12,7 +12,18 @@
         justify-content: center;
         margin-right: 30px;
     }
-   
+    nav{
+        /* width: 100vh; */
+        display: flex;
+        justify-content: space-between;
+    }
+    ul{
+        /* width: 300px; */
+    }
+    li{
+        /* width: 50px; */
+        font-size: small;
+    }
 }
 
 *{
@@ -43,6 +54,7 @@
 }
 
 nav{
+    
     width: 84%;
     margin: auto;
     padding: 20px 0;
