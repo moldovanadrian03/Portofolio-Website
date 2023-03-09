@@ -14,24 +14,16 @@
 }
 
 .hero{
-    height: 380vh;
-    width: 100%;
-    background: var(--primary-color);
-    font-family: sans-serif;
-    position:absolute;
-}
-
-nav{
-    width: 84%;
-    margin: auto;
-    padding: 20px 0;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: space-between;
+    background: var(--primary-color);
+    font-family: sans-serif;
 }
     /*SPIRAL LOGO*/
 .logo{
-    position: fixed;
+    display: flex;
     width: 50px;
     cursor: pointer;
     border-radius: 50%;
@@ -40,12 +32,24 @@ nav{
 .logo:hover{
     transform: rotate(720deg);
 }
-
-nav ul li{
-    display: inline;
+#main-menu{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+nav{
+    display: flex;
+    margin: 10px;
+}
+ul{
+    display: flex;
+    margin-top: 13px;
+    font-size: 17px;
     list-style: none;
-    margin: 10px 20px;
-    margin-left: 32vh;
+}
+li{
+    margin: 10px;
 }
 nav ul li a{
     text-decoration: none;
@@ -108,55 +112,50 @@ span{
 }
  /*BACKGROUND SPIRAL*/
 .img-box .back-img{
-    position: fixed;
-    display: flex;
-    margin-left: 40vh;
+    /* position: fixed; */
+    display:none;
+    justify-content: center;
+    align-items: center;
+    size: 50%;
+    /* margin-left: 40vh;
     margin-top: 10vh;
     height: 90vh;
-    width: 90vh;
+    width: 90vh; */
 }
 .img-box:hover .back-img{
     transform: rotate(3600deg);
 }
 
   /* ICONS */
-  
+
+.social-links{
+    width: 100%;
+    margin-top: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 .social-links a{
-    position: relative;
-    font-size: 100px;
-    display: inline-block;
     color:var(--secondary-color);
-    margin-left: 52vh;
-    margin-top: 30vh;
-    margin-bottom: 10vh;
+    font-size: 100px;
+    
 }
 .social-links a:hover{
     color:#ba260c
 }
   /*VIDEOS*/
-.videos { 
-    position: absolute;
-    /* display: grid; */
-    /* display: flex; */
+ 
+.videos{
+    display: flex;
     flex-direction: column;
-    margin-left: 30em;
+    align-items: center;
+    justify-content: center;
 }
   /*VIDEOS DESCRIPTIONS*/
 h1 {
     color: var(--secondary-color);
-    /* align-content: center; */
-    /* justify-content: flex-end; */
-    /* margin-top: 100px;     */
-    /* margin-left: 6em; */
-    font-size: 50px;
-
 }
 p {
     color: var(--secondary-color);
-    /* align-items: flex-end; */
-    margin: 0;
-    /*cauti tu cat ar trebui in fuctie de titlu si bla bla*/
-    /* margin-left: 24vh; */
-    font-size: 30px;
-
 }
